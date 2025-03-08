@@ -50,4 +50,4 @@ copy_file() {
 }
 
 copy_dir .config $XDG_CONFIG_HOME
-cody_file .bashrc $HOME
+copy_file .bashrc $HOME
