@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+pwd
+sudo cp ./runs/real-prog-qwerty /usr/share/X11/xkb/symbols/
