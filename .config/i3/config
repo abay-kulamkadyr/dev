@@ -37,12 +37,12 @@ exec --no-startup-id nm-applet
 # Switchkeyboard layout to real qwerty
 exec --no-startup-id setxkbmap -layout real-prog-qwerty
 
-# Switch capslock and esc
-exec --no-startup-id setxkbmap -option caps:swapescape
-
 # Set background
 exec --no-startup-id feh --bg-scale /home/abe/Pictures/background.jpg
 
+exec --no-startup-id firefox
+
+exec --no-startup-id ghostty
 
 
 # Use pactl to adjust volume in PulseAudio.
@@ -58,9 +58,6 @@ floating_modifier $mod
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
-
-# start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
