@@ -25,6 +25,8 @@ fi
 unset rc
 . "$HOME/.cargo/env"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/scripts:$PATH"
+
 export XR_RUNTIME_JSON=/usr/local/share/openxr/1/openxr_monado-dev.json
 export VK_LAYER_PATH=/home/abe/work/vulkan/Vulkan-ValidationLayers/build/layers
 export MANPAGER='nvim +Man!'
@@ -33,3 +35,5 @@ export XDG_CONFIG_HOME="$HOME/.config"
 eval "$(starship init bash)"
 alias vim="nvim"
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+bind -x '"\C-f": tmux-sessionizer'
