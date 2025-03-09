@@ -9,8 +9,10 @@ vim.keymap.set('n', '<leader>y', '"+y', { silent = true })
 vim.keymap.set('n', '<leader>Y', 'gg"+yG', { silent = true })
 
 vim.keymap.set('n', '<leader>i', 'gg=G', { silent = true })
+vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux neww tmux-sessionizer<CR>')
+
 --
--- 
+--
 -- Visual mode mappings
 vim.keymap.set('v', '<leader>p', '"_dP', { silent = true })
 vim.keymap.set('v', '<leader>y', '"+y', { silent = true })
