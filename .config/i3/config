@@ -18,7 +18,7 @@ font pango:monospace 15px
 # GET DEM BORDERS OUT OF HEREc:w
 #
 # Thanks Childz
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 4
                           # class                 border  backgr. text    indicator child_border
 for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
 
@@ -47,9 +47,9 @@ exec --no-startup-id setxkbmap -layout real-prog-qwerty
 # Set background
 exec --no-startup-id feh --bg-scale /home/abe/Pictures/background.jpg
 
-exec --no-startup-id firefox
+#exec --no-startup-id firefox
 
-exec --no-startup-id ghostty
+#exec --no-startup-id ghostty
 
 
 # Use pactl to adjust volume in PulseAudio.
@@ -208,6 +208,8 @@ bindsym $mod+Escape exec "~/.config/i3/toggle_layout"
 
 #Suspend
 bindsym $mod+Shift+period exec systemctl suspend
+
+bindsym $mod+p exec --no-startup-id maim | xclip -selection clipboard -t image/png
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
