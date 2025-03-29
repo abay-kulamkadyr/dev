@@ -1,4 +1,5 @@
 #!/use/bin/env bash
 
 sudo dnf install tmux
+mkdir -p $HOME/tmux/plugins/tpm
 git clone https://github.com/tmux-plugins/tpm $HOME/tmux/plugins/tpm
