@@ -26,6 +26,7 @@ unset rc
 . "$HOME/.cargo/env"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/scripts:$PATH"
+export PATH="$HOME/personal/idea-IU-243.25659.59/bin:$PATH"
 
 export XR_RUNTIME_JSON=/usr/local/share/openxr/1/openxr_monado-dev.json
 export VK_LAYER_PATH=/home/abe/work/vulkan/Vulkan-ValidationLayers/build/layers

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+sudo dnf install rofi
+sudo dnf install feh
+sudo cp background.png ~/Pictures/
