@@ -4,6 +4,7 @@ if [ ! -d $HOME/personal/neovim ]; then
 fi
 
 sudo dnf -y install ninja-build cmake gcc make unzip gettext curl glibc-gconv-extra
+
 cd $HOME/personal/neovim
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
