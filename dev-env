@@ -53,3 +53,4 @@ copy_file .starship.toml $XDG_CONFIG_HOME
 copy_dir .local $HOME/.local
 copy_file .bashrc $HOME
 copy_file .ready-tmux $HOME
+copy_file real-prog-qwerty /usr/share/X11/xkb/symbols/
