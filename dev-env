@@ -62,7 +62,7 @@ copy_file() {
 
 copy_file $DEV_ENV/background.jpg $HOME/Pictures
 copy_dir $DEV_ENV/.config $XDG_CONFIG_HOME
-copy_file $DEV_ENV/.starship.toml $XDG_CONFIG_HOME
+copy_file $DEV_ENV/starship.toml $XDG_CONFIG_HOME
 copy_dir $DEV_ENV/.local $HOME/.local
 copy_file $DEV_ENV/.bashrc $HOME
 copy_file $DEV_ENV/.ready-tmux $HOME
