@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+dnf copr enable pgdev/ghostty
+dnf install ghostty
+
