@@ -3,8 +3,7 @@ if [ ! -d $HOME/personal/neovim ]; then
     git clone https://github.com/neovim/neovim.git $HOME/personal/neovim
 fi
 
-sudo dnf install make cmake gettext lua5.1 liblua5.1-0-dev
-
+sudo dnf -y install ninja-build cmake gcc make unzip gettext curl glibc-gconv-extra
 cd $HOME/personal/neovim
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
