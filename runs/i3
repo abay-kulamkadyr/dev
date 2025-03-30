@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+sudo dnf install i3-wm
+sudo dnf install i3
+
