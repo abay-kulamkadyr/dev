@@ -44,7 +44,10 @@ copy_dir() {
 copy_file() {
     from=$1
     to=$2
-    name=$(basename $from) execute rm $from
+    echo "To $to"
+    echo "From $from"
+    name=$(basename $from)
+    execute rm $to/$name
     execute cp $from $to/$name
 }
 copy_file background.jpg $HOME/Pictures/
