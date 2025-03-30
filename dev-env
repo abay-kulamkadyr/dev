@@ -3,6 +3,17 @@
 script_dir="$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)"
 dry="0"
 
+if [ -z "$XDG_CONFIG_HOME" ]; then
+    echo "no xdg config home"
+    echo "using ~/.config"
+    XDG_CONFIG_HOME=$HOME/.config
+fi
+
+if [ -z "$DEV_ENV" ]; then
+    echo "env var DEV_ENV needs to be present"
+    exit 1
+fi
+
 while [[ $# > 0 ]]; do
     if [[ "$1" == "--dry" ]]; then
         dry="1"
@@ -44,16 +55,17 @@ copy_dir() {
 copy_file() {
     from=$1
     to=$2
-    echo "To $to"
-    echo "From $from"
     name=$(basename $from)
     execute rm $to/$name
     execute cp $from $to/$name
 }
-copy_file background.jpg $HOME/Pictures/
-copy_dir .config $XDG_CONFIG_HOME
-copy_file .starship.toml $XDG_CONFIG_HOME
-copy_dir .local $HOME/.local
-copy_file .bashrc $HOME
-copy_file .ready-tmux $HOME
-copy_file real-prog-qwerty /usr/share/X11/xkb/symbols/
+
+copy_file $DEV_ENV/background.jpg $HOME/Pictures
+copy_dir $DEV_ENV/.config $XDG_CONFIG_HOME
+copy_file $DEV_ENV/.starship.toml $XDG_CONFIG_HOME
+copy_dir $DEV_ENV/.local $HOME/.local
+copy_file $DEV_ENV/.bashrc $HOME
+copy_file $DEV_ENV/.ready-tmux $HOME
+copy_file $DEV_ENV/real-prog-qwerty /usr/share/X11/xkb/symbols/
+
+log "--------- dev-env finished ---------"
