@@ -1,8 +1,8 @@
 return {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
     dependencies = {
         "stevearc/conform.nvim",
-        "williamboman/mason.nvim",
+        "mason-org/mason.nvim",
         "neovim/nvim-lspconfig",
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
